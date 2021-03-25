@@ -13,6 +13,30 @@
 </head>
 
 <body>
+    <div id="root">
+
+        <!-- Main -->
+        <main>
+            <!-- Carousel section -->
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="carousel__prev">
+                        <i class="fas fa-chevron-left fa-2x"></i>
+                    </div>
+                    <div class="carousel__image">
+                        <img :src="img[imgIndex].url" :alt="img[imgIndex].descrizione">
+                    </div>
+                    <div class="carousel__next">
+                        <i class="fas fa-chevron-right fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- /Carousel section -->
+        </main>
+        <!-- /Main -->
+
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,3 +4,40 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* TYPOGRAPHY */
+body {
+    font-size: 16px;
+}
+
+/* MAIN */
+.carousel-wrapper {
+    display: flex;
+    height: 100vh;
+}
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+    width: 900px;
+    margin: auto;
+}
+.carousel__image {
+    height: 100%;
+    width: 100%;
+}
+.carousel__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel i {
+    cursor: pointer;
+}
+.carousel__prev i, .carousel__next i {
+    margin: 20px;
+}
+
+
