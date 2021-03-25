@@ -2,7 +2,7 @@ var vm = new Vue(
 	{
 		el: '#root',
         data: {
-            img: [
+            images: [
                 {
                     url: "https://via.placeholder.com/800x400/ef476f/FFFFFF?text=Slide+1",
                     descrizione: "placeholder",
@@ -26,7 +26,7 @@ var vm = new Vue(
             nextImage: function() {
                 this.imgIndex++;
 
-                if ( this.imgIndex == this.img.length ) {
+                if ( this.imgIndex == this.images.length ) {
                     this.imgIndex = 0;
                 }
             },
@@ -34,7 +34,7 @@ var vm = new Vue(
                 this.imgIndex--;
 
                 if ( this.imgIndex < 0 ) {
-                    this.imgIndex = this.img.length - 1;
+                    this.imgIndex = this.images.length - 1;
                 }
             }
         }

@@ -24,7 +24,10 @@
                         <i @click="prevImage" class="fas fa-chevron-left fa-2x"></i>
                     </div>
                     <div class="carousel__image">
-                        <img :src="img[imgIndex].url" :alt="img[imgIndex].descrizione">
+                        <img :src="images[imgIndex].url" :alt="images[imgIndex].descrizione">
+                        <div class="carousel-bullets">
+                            <i class="fas fa-circle" v-for="(img, index) in images" :class="imgIndex == index ? 'active' : ''" @click="imgIndex = index"></i>
+                        </div>
                     </div>
                     <div class="carousel__next">
                         <i @click="nextImage" class="fas fa-chevron-right fa-2x"></i>
