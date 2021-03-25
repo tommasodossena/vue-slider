@@ -21,13 +21,13 @@
             <div class="carousel-wrapper">
                 <div class="carousel">
                     <div class="carousel__prev">
-                        <i class="fas fa-chevron-left fa-2x"></i>
+                        <i @click="prevImage" class="fas fa-chevron-left fa-2x"></i>
                     </div>
                     <div class="carousel__image">
                         <img :src="img[imgIndex].url" :alt="img[imgIndex].descrizione">
                     </div>
                     <div class="carousel__next">
-                        <i class="fas fa-chevron-right fa-2x"></i>
+                        <i @click="nextImage" class="fas fa-chevron-right fa-2x"></i>
                     </div>
                 </div>
             </div>

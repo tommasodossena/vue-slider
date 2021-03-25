@@ -19,8 +19,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 1200px;
     height: 600px;
-    width: 900px;
     margin: auto;
 }
 .carousel__image {
@@ -37,7 +37,7 @@ body {
     cursor: pointer;
 }
 .carousel__prev i, .carousel__next i {
-    margin: 20px;
+    margin: 50px;
 }
 
 
