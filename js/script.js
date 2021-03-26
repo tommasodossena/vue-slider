@@ -4,20 +4,20 @@ var vm = new Vue(
         data: {
             images: [
                 {
-                    url: "https://via.placeholder.com/800x400/ef476f/FFFFFF?text=Slide+1",
-                    descrizione: "placeholder",
+                    url: "img/g1.jpg",
+                    descrizione: "Getty museum front view",
                 },
                 {
-                    url: "https://via.placeholder.com/800x400/ffd166/FFFFFF?text=Slide+2",
-                    descrizione: "placeholder",
+                    url: "img/g2.jpg",
+                    descrizione: "Getty museum detail",
                 },
                 {
-                    url: "https://via.placeholder.com/800x400/06d6a0/FFFFFF?text=Slide+3",
-                    descrizione: "placeholder",
+                    url: "img/g3.jpg",
+                    descrizione: "Getty museum side view",
                 },
                 {
-                    url: "https://via.placeholder.com/800x400/118ab2/FFFFFF?text=Slide+4",
-                    descrizione: "placeholder",
+                    url: "img/g4.jpg",
+                    descrizione: "Getty museum sunset view",
                 }
             ],
             imgIndex: 0

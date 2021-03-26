@@ -8,36 +8,81 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>vue-slider</title>
 </head>
 
 <body>
     <div id="root">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="img/g-logo.png" alt="Made in Japan logo">
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Museum</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Support Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- /Header -->
 
         <!-- Main -->
         <main>
-            <!-- Carousel section -->
-            <div class="carousel-wrapper">
-                <div class="carousel">
-                    <div class="carousel__prev">
-                        <i @click="prevImage" class="fas fa-chevron-left fa-2x"></i>
+            <!-- Main left -->
+            <div class="main-left">
+                <div class="main-left__header">
+                    <div class="social">
+                        <a href="#">facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">twitter</a>
                     </div>
-                    <div class="carousel__image">
-                        <img :src="images[imgIndex].url" :alt="images[imgIndex].descrizione">
-                        <div class="carousel-bullets">
-                            <i class="fas fa-circle" v-for="(img, index) in images" :class="imgIndex == index ? 'active' : ''" @click="imgIndex = index"></i>
-                        </div>
+                    <div class="title">
+                        <h1>The Jean Paul Getty Museum</h1>
+                        <p>The J. Paul Getty Museum at the Getty Center features works of art dating from the eighth through the twenty-first century, showcased against a backdrop of dramatic architecture, tranquil gardens, and breathtaking views of Los Angeles.</p>
                     </div>
-                    <div class="carousel__next">
-                        <i @click="nextImage" class="fas fa-chevron-right fa-2x"></i>
+                </div>
+                <div class="main-left__footer">
+                    <div class="paragraph-wrapper">
+                        <p>34°04'23.40" N</p>
+                        <p>118°28'17.99" W</p>
                     </div>
                 </div>
             </div>
-            <!-- /Carousel section -->
+            <!-- /Main left -->
+
+            <!-- Main right -->
+            <div class="main-right">
+                <div class="carousel">
+                    <div class="carousel__control">
+                        <div class="carousel-prev">
+                            <i @click="prevImage" class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="carousel-next">
+                            <i @click="nextImage" class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="carousel-bullets">
+                        <i class="fas fa-circle" v-for="(img, index) in images" :class="imgIndex == index ? 'active' : ''" @click="imgIndex = index"></i>
+                    </div>
+                    <img :src="images[imgIndex].url" :alt="images[imgIndex].descrizione">
+                </div>
+                <div class="scroll-down">
+                    <p>scroll down</p>
+                </div>
+            </div> 
+            <!-- /Main right -->
         </main>
         <!-- /Main -->
-
     </div>
 
     <script src="js/script.js"></script>
