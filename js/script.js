@@ -20,7 +20,22 @@ var vm = new Vue(
                     descrizione: "Getty museum sunset view",
                 }
             ],
-            imgIndex: 0
+            imgIndex: 0,
+            autoplay: null
+        },
+        mounted: function() {
+            // Carousel autoplay event
+            this.autoplay = setInterval(this.nextImage, 4000);
+            
+            // // Carousel keyboard event
+            // const component = this;
+            // window.addEventListener('keydown', function (e) {
+            //     if ( e.which == 37 ) {
+            //         component.prevImage();
+            //     } else if (e.which == 39 ) {
+            //         component.nextImage();
+            //     }
+            // });
         },
         methods: {
             nextImage: function() {
